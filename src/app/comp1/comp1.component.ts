@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-comp1',
   templateUrl: './comp1.component.html',
-  styleUrls: ['./comp1.component.css']
+  styleUrls: ['./comp1.component.css'],
 })
-export class Comp1Component {
+export class Comp1Component implements OnInit {
+  constructor() {}
 
+  ngOnInit(): void {}
+
+  enterText: string = '';
+
+  OnButtonClick() {
+    console.warn(this.enterText);
+  }
 }
